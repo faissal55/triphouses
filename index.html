@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page d'accueil</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: url('pages/assets/images/pexels.jpg') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Voile noir semi-transparent */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    h1 {
+      color: white;
+      margin-bottom: 50px;
+      font-size: 3em;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+      text-align: center;
+      z-index: 1;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 40px;
+      z-index: 1;
+    }
+
+    .btn {
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #ff4d4d;
+      border: none;
+      padding: 20px 50px;
+      font-size: 1.5em;
+      font-weight: bold;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(255, 77, 77, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #ff4d4d;
+      color: white;
+      box-shadow: 0 0 20px #ff4d4d;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+        margin-bottom: 30px;
+      }
+
+      .buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn {
+        width: 220px;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Bienvenue sur Triphouse.com, la nouvelle façon de trouver, vendre, acheter ou  louer des biens immobiliers facilement.</h1>
+  <div class="buttons">
+    <button class="btn" onclick="window.location.href='pages/indexx.php'">Visiteur</button>
+    <button class="btn" onclick="window.location.href='pages/annonceur.php'">Annonceur</button>
+  </div>
+</body>
+</html>
